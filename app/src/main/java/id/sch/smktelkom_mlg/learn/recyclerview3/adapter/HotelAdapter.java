@@ -24,6 +24,13 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
     ArrayList<Hotel> hotelList;
     IHotelAdapter mIhotelAdapter;
 
+    public  interface IHotelAdapter{
+        void doClick(int pos);
+        void doEdit(int pos);
+        void doDelete(int pos);
+        void doFav(int pos);
+        void doShare(int pos);
+    }
     public HotelAdapter(Context context, ArrayList<Hotel> hotelList)
     {
         this.hotelList = hotelList;
@@ -108,12 +115,6 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
 
         }
     }
-    public  interface IHotelAdapter{
-        void doClick(int pos);
-        void doEdit(int pos);
-        void doDelete(int pos);
-        void doFav(int pos);
-        void doShare(int pos);
-    }
+
 
 }
